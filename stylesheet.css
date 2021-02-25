@@ -180,13 +180,13 @@
     border-bottom: 1px solid #eee;
     padding-bottom: 80px;
     text-align: center;
+    background-color: chocolate;
   }
-  
   .message {
     padding: 15px 40px;
-    background-color: #5dca88;
+    background-color: #5d83ca;
     cursor: pointer;
-    box-shadow: 0 7px #1a7940;
+    box-shadow: 0 7px #371586;
   }
   
   .message:active {
