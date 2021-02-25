@@ -209,3 +209,30 @@
     padding-top: 5px;
     padding-bottom: 5px;
   }
+  .project {
+    background-color: burlywood;
+  }
+  .project-title h1 {
+    text-align: center;
+    background-color: rgb(127, 214, 255);
+    font-size: 40px;
+    width: auto;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .project-title p {
+    color: green;
+    font-size: 30px;
+    padding-left: 20px;
+    margin: 10px;
+    width: auto;
+  }
+  .project-title a {
+    padding-top: 15px;
+    font-size: 30px;
+    padding-left: 20px;
+    margin: 10px;
+    text-align: center;
+    padding-bottom: 15px;
+  }
