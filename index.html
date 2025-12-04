@@ -1,99 +1,393 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Sourabh's Portfolio</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourabh Tyagi - Software Engineer</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="header-left">
-          <img class="logo" src="https://i.ibb.co/LkwgJBL/linkedin-banner-image-1-removebg-preview.png">
-        </div>
-  
-        <div class="header-right">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#" class="login">Contact</a>
-        </div>
-      </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">ST</a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
     </header>
-    <div class="top-wrapper">
-      <div class="container">
-        <h1>HI! WELCOME TO MY PORTFOLIO</h1>
-        <h1>ABOUT ME-</h1>
-        <p>Myself SOURABH TYAGI -a 3rd year engineering Undergraduate student with Electrical and Electronics as specialisation.</p>
-        <p>Here, you will be interacting with me virtually:)</p>
-        <div class="btn-wrapper">
-          <a href="https://github.com/sourabh-tyagi" target="_blank" class="btn github"><span class="fa fa-github"></span>Follow & See my projects on Github</a>
-          <a href="https://linkedin.com/in/sourabh-tyagi-7b595b1a0" target="_blank" class="btn linkedin"><span class="fa fa-linkedin"></span>See my Profile on Linkedin</a>
-          <a href="https://twitter.com/sourabhtyagi191" target="_blank" class="btn twitter"><span class="fa fa-twitter"></span>Say 'Hello' to me on Twitter</a>
-        </div>
-      </div>
-    </div>
-    <div class="lesson-wrapper">
-      <div class="container">
-        <div class="heading">
-          <h2>Below are some of my skills!</h2>
-        </div>
-        <div class="lessons">
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/html.png">
-              <p>HTML & CSS</p>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Hi, I'm <span class="highlight">Sourabh Tyagi</span></h1>
+                    <h2 class="hero-subtitle">Software Engineer</h2>
+                    <p class="hero-description">
+                        A passionate Software Engineer with 3.5+ years of experience specializing in backend development, 
+                        microservices architecture, and full-stack applications. I love creating efficient, scalable solutions 
+                        that solve real-world problems.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-medium-m"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-circle">
+                        <img src="images/profile.jpg" alt="Sourabh Tyagi">
+                    </div>
+                </div>
             </div>
-            <p class="text-contents">Languages used to build and design the appearances of your websites. HTML adds the structure, and CSS styles it.</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-              <p>Python</p>
-            </div>
-            <p class="text-contents">Python is an interpreted, high-level and general-purpose programming language.</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/ruby.png">
-              <p>C/C++</p>
-            </div>
-            <p class="text-contents">C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language.</p>
-          </div>
-          <div class="lesson">
-            <div class="lesson-icon">
-              <img src="https://prog-8.com/images/html/advanced/php.png">
-              <p>PLC & SCADA</p>
-            </div>
-            <p class="text-contents">Programmable Logic Controller or PLC is a computing system used to control electromechanical processes. SCADA stands for Supervisory Control and Data Acquisition. It is a type of industrial control system that is used to monitor and control facilities and infrastructure in industries.</p>
-          </div>
-          <div class="clear"></div>
         </div>
-      </div>
-    </div>
-    <div class="project">
-      <div class="project-title">
-        <h1>PROJECTS</h1>
-        <p>Here is my Project which I made recently:</p>
-        <a href="https://sourabh-tyagi.github.io/Portfolio/"> My Portfolio Webpage</a>
-      </div>
-    </div>
-    <div class="message-wrapper">
-      <div class="container">
-        <div class="heading">
-          <img style="float: left; margin: 0px 10px 10px 0px;" src="https://i.ibb.co/ZM6cyYf/52029425-2461720123860361-3776717516176034077-n.jpg" width="250" />
-          <h2>Wanna connect with me?</h2>
-          <h3>Just click the button below, submit your message & I will contact you!</h3>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Software Engineer with 3.5+ years of experience building robust, scalable applications 
+                        using modern technologies. My expertise lies in backend development with Java and Spring Boot, 
+                        microservices architecture, and full-stack development with Angular and React.
+                    </p>
+                    <p>
+                        I specialize in designing and implementing efficient backend systems, RESTful APIs, 
+                        and microservices that power modern web applications. I'm passionate about clean code, 
+                        best practices, and continuous learning.
+                    </p>
+                    <p>
+                        When I'm not coding, I enjoy contributing to open-source projects, writing technical articles, 
+                        and exploring new technologies to stay at the forefront of software development.
+                    </p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>3.5+ Years</h3>
+                            <p>Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+ Projects</h3>
+                            <p>Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>10+ Technologies</h3>
+                            <p>Mastered</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <span class="btn message">Send Message</span>
-      </div>
-    </div>
-    <footer>
-      <div class="container">
-        <img src="https://i.ibb.co/zhGVZhw/logo-transparent.png">
-        <p>Sourabh Tyagi.</p>
-      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Senior Software Engineer</h3>
+                        <span class="company">Tech Company</span>
+                        <span class="date">Jan 2022 - Present</span>
+                        <p>
+                            Leading backend development initiatives using Java, Spring Boot, and microservices architecture. 
+                            Implemented scalable solutions serving thousands of users daily.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Software Engineer</h3>
+                        <span class="company">Previous Company</span>
+                        <span class="date">Mar 2020 - Dec 2021</span>
+                        <p>
+                            Developed and maintained enterprise applications using Java, Spring Boot, and Angular. 
+                            Collaborated with cross-functional teams to deliver high-quality software solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>Backend Development</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Java</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Spring Boot</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Microservices</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Angular</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">React</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">HTML/CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Git</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Docker</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Jenkins</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">AWS</span>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project1.jpg" alt="E-commerce Platform">
+                    </div>
+                    <div class="project-content">
+                        <h3>E-commerce Platform</h3>
+                        <p>A full-stack e-commerce solution built with Spring Boot and Angular, featuring product management, 
+                           user authentication, payment processing, and order tracking.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>Angular</span>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project2.jpg" alt="Microservices API">
+                    </div>
+                    <div class="project-content">
+                        <h3>Microservices API</h3>
+                        <p>A scalable microservices architecture handling user management, order processing, and 
+                           inventory management with Spring Cloud and Docker.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project3.jpg" alt="Task Management App">
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management App</h3>
+                        <p>A full-stack task management application with React frontend and Spring Boot backend, 
+                           featuring real-time updates, user collaboration, and project tracking.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Spring Boot</span>
+                            <span>PostgreSQL</span>
+                            <span>WebSockets</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's talk about your project</h3>
+                    <p>I'm currently available for freelance work or full-time opportunities. 
+                       Feel free to reach out if you're looking for a skilled Software Engineer.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>sourabh.tyagi@example.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (123) 456-7890</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>India</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links contact-social">
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-medium-m"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sourabh Tyagi. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-medium-m"></i></a>
+            </div>
+        </div>
     </footer>
-  </body>
+
+    <script src="script.js"></script>
+</body>
 </html>
