@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sourabh Tyagi - Software Engineer</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="description" content="Sourabh Tyagi — Software Engineer. Backend, microservices, and full-stack developer. Explore projects, skills, and contact information.">
+    <meta name="theme-color" content="#0f172a">
+    <title>Sourabh Tyagi — Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+<div class="site-wrapper">
     <!-- Header/Navigation -->
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
-                <a href="#" class="nav-logo">ST</a>
+                <a href="#" class="nav-logo"><span class="logo-mark">ST</span><span class="logo-text">Sourabh Tyagi</span></a>
+                <div class="visit-counter" title="Total visits">
+                    <i class="fas fa-eye"></i>
+                    <span id="visitCount" aria-live="polite">—</span>
+                </div>
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="#home" class="nav-link">Home</a>
@@ -44,12 +53,12 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-label="Introduction">
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-title">Hi, I'm <span class="highlight">Sourabh Tyagi</span></h1>
-                    <h2 class="hero-subtitle">Software Engineer</h2>
+                    <h2 class="hero-subtitle">Software Engineer — Backend &amp; Full‑Stack</h2>
                     <p class="hero-description">
                         A passionate Software Engineer with 3.5+ years of experience specializing in backend development, 
                         microservices architecture, and full-stack applications. I love creating efficient, scalable solutions 
@@ -68,7 +77,7 @@
                 </div>
                 <div class="hero-image">
                     <div class="profile-circle">
-                        <img src="images/profile.jpg" alt="Sourabh Tyagi">
+                        <div class="profile-placeholder" aria-hidden="true"><span>ST</span></div>
                     </div>
                 </div>
             </div>
@@ -249,8 +258,8 @@
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/project1.jpg" alt="E-commerce Platform">
+                    <div class="project-image placeholder" aria-hidden="true">
+                        <div class="project-placeholder"><i class="fas fa-box-open"></i></div>
                     </div>
                     <div class="project-content">
                         <h3>E-commerce Platform</h3>
@@ -270,8 +279,8 @@
                 </div>
                 
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/project2.jpg" alt="Microservices API">
+                    <div class="project-image placeholder" aria-hidden="true">
+                        <div class="project-placeholder"><i class="fas fa-network-wired"></i></div>
                     </div>
                     <div class="project-content">
                         <h3>Microservices API</h3>
@@ -291,8 +300,8 @@
                 </div>
                 
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/project3.jpg" alt="Task Management App">
+                    <div class="project-image placeholder" aria-hidden="true">
+                        <div class="project-placeholder"><i class="fas fa-tasks"></i></div>
                     </div>
                     <div class="project-content">
                         <h3>Task Management App</h3>
@@ -388,6 +397,9 @@
         </div>
     </footer>
 
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
     <script src="script.js"></script>
+</div>
 </body>
 </html>

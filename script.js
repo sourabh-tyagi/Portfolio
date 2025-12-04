@@ -92,3 +92,47 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 });
+
+// Back to top button
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) backToTop.style.display = 'inline-flex';
+        else backToTop.style.display = 'none';
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// Small typewriter-like role subtitle cycle (progressive, optional)
+const subtitleEl = document.querySelector('.hero-subtitle');
+if (subtitleEl) {
+    const roles = ['Software Engineer', 'Backend • Microservices', 'Full‑Stack Developer'];
+    let idx = 0;
+    setInterval(() => {
+        idx = (idx + 1) % roles.length;
+        subtitleEl.style.opacity = 0;
+        setTimeout(() => { subtitleEl.textContent = roles[idx]; subtitleEl.style.opacity = 1; }, 350);
+    }, 4000);
+}
+
+// Page visit counter: increment and fetch total visits from server
+const visitCountEl = document.getElementById('visitCount');
+const incrementVisit = async () => {
+    try {
+        const res = await fetch('/api/hit', { method: 'POST' });
+        if (!res.ok) throw new Error('Network response was not ok');
+        const data = await res.json();
+        if (visitCountEl) visitCountEl.textContent = data.count.toLocaleString();
+    } catch (err) {
+        if (visitCountEl) visitCountEl.textContent = '—';
+        console.warn('Visit counter failed:', err);
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Fire-and-forget increment; update UI when response arrives
+    incrementVisit();
+});
