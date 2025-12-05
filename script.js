@@ -136,3 +136,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fire-and-forget increment; update UI when response arrives
     incrementVisit();
 });
+
+// Theme toggle: persist preference in localStorage
+const themeToggle = document.getElementById('themeToggle');
+const applyTheme = (mode) => {
+    if (mode === 'light') document.documentElement.classList.add('light-mode');
+    else document.documentElement.classList.remove('light-mode');
+    // update button icon
+    if (themeToggle) themeToggle.textContent = mode === 'light' ? '☀️' : '🌙';
+    try { localStorage.setItem('site-theme', mode); } catch (e) { /* ignore */ }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    let saved = 'dark';
+    try { saved = localStorage.getItem('site-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'); } catch (e) {}
+    applyTheme(saved);
+    if (themeToggle) themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.classList.contains('light-mode') ? 'light' : 'dark';
+        applyTheme(current === 'light' ? 'dark' : 'light');
+    });
+});

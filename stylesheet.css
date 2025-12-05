@@ -8,6 +8,17 @@
     --surface:#071028;
 }
 
+/* Light mode overrides (toggle adds .light-mode to <body>) */
+.light-mode{
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --muted: #475569;
+    --accent: #2563eb;
+    --accent-2: #7c3aed;
+    --glass: rgba(2,6,23,0.02);
+    --surface: #ffffff;
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
 body{
@@ -96,7 +107,14 @@ body{
 }
 
 .profile-circle{width:320px;height:320px;border-radius:22px;background:linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));padding:12px;box-shadow:0 12px 40px rgba(5,8,20,0.6);overflow:hidden;display:flex;align-items:center;justify-content:center}
+
 .profile-circle img{width:100%;height:100%;object-fit:cover;border-radius:14px;border:2px solid rgba(255,255,255,0.04)}
+.profile-photo{display:block}
+.profile-placeholder{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:48px;color:var(--muted)}
+
+/* Theme toggle button */
+.theme-toggle{background:transparent;border:0;color:var(--muted);font-size:18px;padding:8px 10px;border-radius:8px;cursor:pointer}
+.theme-toggle:hover{color:var(--accent)}
 
 /* Placeholder when images are removed */
 .profile-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;border-radius:14px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#071028;font-size:3.2rem;font-weight:800}
@@ -197,6 +215,8 @@ body{
 
 .skills-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
 
+.certifications{margin-top:18px;color:var(--muted);font-size:0.95rem}
+
 .skills-category h3 {
     color: #1e293b;
     margin-bottom: 25px;
@@ -215,6 +235,22 @@ body{
 
 .skill-bar{height:10px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
 .skill-level{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:999px;transition:width 900ms cubic-bezier(.2,.9,.3,1)}
+
+/* Education Section */
+.education{padding:80px 0;background:transparent}
+
+.education-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:900px;margin:0 auto}
+
+.education-item{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:12px;padding:24px;border-left:4px solid var(--accent);transition:transform .3s}
+.education-item:hover{transform:translateX(6px)}
+
+.education-item h3{font-size:1.2rem;margin-bottom:8px;color:#e6eef8}
+
+.education-item .institution{display:block;color:var(--accent);font-weight:600;margin-bottom:6px;font-size:0.95rem}
+
+.education-item .date{display:block;color:var(--muted);font-size:0.9rem;margin-bottom:8px}
+
+.education-item p{color:rgba(230,238,248,0.8);font-size:0.95rem}
 
 /* Projects Section */
 .projects{padding:80px 0;background:transparent}
