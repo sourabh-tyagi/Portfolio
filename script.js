@@ -87,9 +87,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observe elements that should animate
-    document.querySelectorAll('.project-card, .timeline-item, .stat-item, .skill-item').forEach(el => {
+    // Observe elements that should animate - updated to include new card classes
+    document.querySelectorAll('.project-card, .timeline-item, .stat-item, .skill-item, .experience-card, .education-card').forEach(el => {
         observer.observe(el);
+    });
+    
+    // Add staggered animation delay for cards
+    document.querySelectorAll('.experience-card, .education-card').forEach((el, idx) => {
+        el.style.setProperty('--delay', (idx * 100) + 'ms');
+        el.style.animation = `slideUp 600ms cubic-bezier(0.34,1.56,0.64,1) var(--delay) both`;
     });
 });
 
@@ -140,19 +146,27 @@ document.addEventListener('DOMContentLoaded', () => {
 // Theme toggle: persist preference in localStorage
 const themeToggle = document.getElementById('themeToggle');
 const applyTheme = (mode) => {
-    if (mode === 'light') document.documentElement.classList.add('light-mode');
-    else document.documentElement.classList.remove('light-mode');
-    // update button icon
-    if (themeToggle) themeToggle.textContent = mode === 'light' ? '☀️' : '🌙';
+    const htmlEl = document.documentElement;
+    if (mode === 'dark') {
+        htmlEl.classList.add('dark-mode');
+        if (themeToggle) themeToggle.textContent = '☀️';
+    } else {
+        htmlEl.classList.remove('dark-mode');
+        if (themeToggle) themeToggle.textContent = '🌙';
+    }
     try { localStorage.setItem('site-theme', mode); } catch (e) { /* ignore */ }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    let saved = 'dark';
-    try { saved = localStorage.getItem('site-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'); } catch (e) {}
+    let saved = 'light';
+    try { 
+        saved = localStorage.getItem('site-theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); 
+    } catch (e) {}
     applyTheme(saved);
-    if (themeToggle) themeToggle.addEventListener('click', () => {
-        const current = document.documentElement.classList.contains('light-mode') ? 'light' : 'dark';
-        applyTheme(current === 'light' ? 'dark' : 'light');
-    });
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const current = document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light';
+            applyTheme(current === 'dark' ? 'light' : 'dark');
+        });
+    }
 });
