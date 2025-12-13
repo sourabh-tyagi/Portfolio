@@ -99,6 +99,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Header scroll effect
+const header = document.querySelector('.header');
+if (header) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+}
+
 // Back to top button
 const backToTop = document.getElementById('backToTop');
 if (backToTop) {
@@ -150,9 +162,15 @@ const applyTheme = (mode) => {
     if (mode === 'dark') {
         htmlEl.classList.add('dark-mode');
         if (themeToggle) themeToggle.textContent = '☀️';
+        // Add dark mode class to hero section for special styling
+        const heroSection = document.querySelector('.hero');
+        if (heroSection) heroSection.classList.add('dark-mode');
     } else {
         htmlEl.classList.remove('dark-mode');
         if (themeToggle) themeToggle.textContent = '🌙';
+        // Remove dark mode class from hero section
+        const heroSection = document.querySelector('.hero');
+        if (heroSection) heroSection.classList.remove('dark-mode');
     }
     try { localStorage.setItem('site-theme', mode); } catch (e) { /* ignore */ }
 };
